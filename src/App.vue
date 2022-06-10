@@ -60,14 +60,14 @@ export default {
                 chartsHeight.style = { 'height': `${document.getElementById("container").clientWidth / 580 * 1080}px` };
                 // console.log(scaleMap.style);
             };
-            axios("https://c.m.163.com/netease/ug/api/wuhan/app/data/list-total")
+            axios({baseURL:"/netease/ug/api/wuhan/app/data/list-total"})
                 .then((res) => {
                     data.data = res.data.data
                     // console.log(data.data);
                 }).catch((e) => {
                     console.log(e);
                 });
-            axios("https://pv.sohu.com/sohu/cityjson?ie=utf-8")
+            axios("/sohu/cityjson?ie=utf-8")
                 .then((res) => {
                     city.city = res.data.toString()
                 })
