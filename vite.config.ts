@@ -5,11 +5,10 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [vue()],
   server:{
-    port:3000,
     proxy:{
       '/netease':{
         target:'https://c.m.163.com/',
-        changeOrigin:false,
+        changeOrigin:true,
         ws:true,
         rewrite:(path)=>path.replace(/^\/netease/,'')
       },
