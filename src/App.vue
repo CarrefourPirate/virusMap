@@ -65,6 +65,7 @@ export default {
                     data.data = res.data.data
                     // console.log(data.data);
                 }).catch((e) => {
+                    console.log("OK");
                     console.log(e);
                 });
             axios("/sohu/cityjson?ie=utf-8")
