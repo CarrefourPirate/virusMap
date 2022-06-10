@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>实时更新|新冠肺炎疫情动态地图</title>
+    <style>
+      html,body{
+        height: 100%;
+      }
+      body {
+        background-color: rgb(29, 32, 37);
+      }
+      body::-webkit-scrollbar{
+        display: none;
+      }
+      .bgImg {
+        width: 100%;
+        opacity: 1;
+        height: 26.8vh;
+        background-image: linear-gradient(
+            to top,
+            rgba(29, 32, 37, 1) 5%,
+            rgba(0, 0, 0, 0) 50%
+          ),
+          url("./src/assets/banner.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        min-width: 370px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bgImg" id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
