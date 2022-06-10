@@ -8,12 +8,14 @@ export default defineConfig({
     proxy:{
       '/netease':{
         target:'https://c.m.163.com/',
-        changeOrigin:false,
+        changeOrigin:true,
+        ws:true,
         rewrite:(path)=>path.replace(/^\/netease/,'')
       },
       '/sohu':{
         target:'https://pv.sohu.com/',
-        changeOrigin:false,
+        changeOrigin:true,
+        ws:true,
         rewrite:(path)=>path.replace(/^\/sohu/,'')
       }
     }
