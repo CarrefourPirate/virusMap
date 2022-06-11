@@ -61,8 +61,8 @@ export default {
                 // console.log(scaleMap.style);
             };
             axios({
-                // url:"/netease/ug/api/wuhan/app/data/list-total",
-                baseURL:'/netease/ug/api/wuhan/app/data/list-total',
+                url:"/ug/api/wuhan/app/data/list-total",
+                baseURL:'/netease',
                 })
                 .then((res) => {
                     data.data = res.data.data
