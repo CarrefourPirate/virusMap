@@ -60,7 +60,10 @@ export default {
                 chartsHeight.style = { 'height': `${document.getElementById("container").clientWidth / 580 * 1080}px` };
                 // console.log(scaleMap.style);
             };
-            axios({baseURL:"/netease/ug/api/wuhan/app/data/list-total"})
+            axios({url:"/netease/ug/api/wuhan/app/data/list-total",
+                method:"get",
+                baseURL:'https://c.m.163.com/'
+                })
                 .then((res) => {
                     data.data = res.data.data
                     // console.log(data.data);
@@ -102,7 +105,6 @@ export default {
             cityData,
             scaleMap,
             chartsHeight
-
         }
     },
     components: { TopBox, CovidMap, CovidLineChart, CovidTable, Swiper, SwiperSlide },
