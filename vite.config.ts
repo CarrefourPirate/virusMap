@@ -6,11 +6,11 @@ export default defineConfig({
   plugins: [vue()],
   server:{
     proxy:{
-      '/net':{
+      '/netease':{
         target:'https://c.m.163.com/',
         changeOrigin:true,
         ws:true,
-        rewrite:(path)=>path.replace(/^\/net/,'')
+        rewrite:(path)=>path.replace(/^\/netease/,'')
       },
       '/sohu':{
         target:'https://pv.sohu.com/',

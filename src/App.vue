@@ -62,7 +62,7 @@ export default {
             };
             axios({
                 url:"/ug/api/wuhan/app/data/list-total",
-                baseURL:'/net',
+                baseURL:'/netease',
                 })
                 .then((res) => {
                     data.data = res.data.data
