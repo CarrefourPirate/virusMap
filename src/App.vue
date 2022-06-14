@@ -60,9 +60,10 @@ export default {
                 chartsHeight.style = { 'height': `${document.getElementById("container").clientWidth / 580 * 1080}px` };
                 // console.log(scaleMap.style);
             };
-            axios({
-                url:"/ug/api/wuhan/app/data/list-total",
+            axios.request({
+                method:"get",
                 baseURL:'/netease',
+                url:"/ug/api/wuhan/app/data/list-total",
                 })
                 .then((res) => {
                     data.data = res.data.data

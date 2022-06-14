@@ -90,7 +90,7 @@ export default {
     display: flex;
     width: 100%;
     flex-direction:column;
-    padding: px 0;
+    padding: 0px 0;
     background-color: rgba(50, 50, 50, 0.2);
     border-bottom: 1px solid rgba(20, 20, 20, 0.15);
 }
