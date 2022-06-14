@@ -19,7 +19,7 @@
 
 <script>
 import * as echarts from 'echarts';
-import { getCurrentInstance, reactive, toRefs, onMounted, ref, provide, onBeforeUnmount } from "vue";
+import {reactive, toRefs, onMounted, ref, provide,} from "vue";
 import axios from "axios";
 import TopBox from "./components/topBox.vue";
 import CovidMap from "./components/covidMap.vue"
@@ -60,10 +60,8 @@ export default {
                 chartsHeight.style = { 'height': `${document.getElementById("container").clientWidth / 580 * 1080}px` };
                 // console.log(scaleMap.style);
             };
-            axios.request({
-                method:"get",
-                baseURL:'/netease',
-                url:"/ug/api/wuhan/app/data/list-total",
+            axios({
+                url:"/netease/ug/api/wuhan/app/data/list-total",
                 })
                 .then((res) => {
                     data.data = res.data.data
@@ -73,7 +71,7 @@ export default {
                     console.log(e);
                 });
             axios("/sohu/cityjson?ie=utf-8")
-                .then((res) => {
+                .then((res) => { 
                     city.city = res.data.toString()
                 })
                 .catch((error) => {
